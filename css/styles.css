@@ -1,11 +1,13 @@
 body{
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 100%;
 	line-height: 1.7em;
 	color: #000000;
 
 
 }
+
+/*Style for index.html begins here*/
 
 #container{
 	width: 70%;
@@ -20,7 +22,7 @@ body{
 	padding: .5em .5em 3em .5em;
 }
 #top_row h1 {
-	color: #ca1e00;
+	color: #005D7F;
 	font-size: 3.75em;
 	letter-spacing: -2px;
 }
@@ -52,7 +54,11 @@ body{
 }
 #top_row nav a:hover {
 	background: #f6f6f6;
-	color: #ca1e00;
+	color: #005D7F;
+}
+
+#top_row nav a.selected{
+	background: #f6f6f6;
 }
 
 
@@ -62,6 +68,12 @@ body{
 	margin: 0;
 	padding: 1em;
 	border-right: 1px dotted #ccc;
+}
+/*#content p{
+	overflow: hidden;
+}*/
+#content a:hover{
+	color: #005D7F;
 }
 
 #content h3 {
@@ -77,9 +89,20 @@ body{
 	font-size: 0.875em;
 }
 
+
+
 #sidebar h3 {
 	font-size: 1.125em;
 	border-bottom: 1px dotted #ccc;
+
+}
+
+#sidebar a {
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	text-decoration: underline;
 }
 
 
@@ -88,13 +111,13 @@ footer{
 	margin: 0;
 	padding: 0.5em;
 	color: #333333;
-	font-variant: small-caps;
+	
 	font-size: 0.813em;
 	text-align: center;
 }
 
 #content img{
-	float: left;
+	float: right;
 	margin: 1em;
 
 }
@@ -110,7 +133,16 @@ footer{
 	color: #000;
 }
 #bio a:hover{
-	color: #ca1e00;
+	color: #005D7F;
+}
+
+
+/*Style for index.html ends here*/
+
+/*Style for projects.html starts here*/
+
+html {
+	overflow-y: scroll;
 }
 
 
