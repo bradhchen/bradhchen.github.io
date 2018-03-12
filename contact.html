@@ -47,41 +47,41 @@
 			</nav>
 		</div>
 		<script>function validate()
+		{
+			if (document.submit.message.value.length < 10)
 			{
-				if (document.submit.message.value.length < 10)
-				{
-					alert("Don't be shy, write a longer message!");
-					return false;
-				}
-				return true;
+				alert("Don't be shy, write a longer message!");
+				return false;
 			}
-		</script>
+			return true;
+		}
+	</script>
 
 
-		<div id = "content">
-			<h3>Contact</h3><br>
+	<div id = "content">
+		<h3>Contact</h3><br>
 
-			<form name = "submit" onSubmit = "return validate();" action = "contact_successful.html">
+		<form name = "submit" onSubmit = "return validate();" action = "contact_successful.html">
+			
+			<fieldset>
+				<legend>Tell me more about yourself		</legend>
+				Name: <br>
+				<input type = "text" name = "name" placeholder = "Your Name" maxlength = "250" minlength = "3" required><br><br>
+				Your date of birth: <br>
+				<input type = "text" name = "dob" placeholder = "mm/dd/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}"><br><br>
+				Your favorite flower colors: <br>
+				<input type = "checkbox" name = "red">Red<br>
+				<input type = "checkbox" name = "blue">Blue<br>
+				<input type = "checkbox" name = "blue">Yellow<br>
+				<input type = "checkbox" name = "blue">Orange<br><br>
+
+			</fieldset>
+			<fieldset>
+				<legend>Let's start a conversation</legend>
 				
-				<fieldset>
-					<legend>Tell me more about yourself		</legend>
-					Name: <br>
-					<input type = "text" name = "name" placeholder = "Your Name" maxlength = "250" minlength = "3" required><br><br>
-					Your date of birth: <br>
-					<input type = "text" name = "dob" placeholder = "mm/dd/yyyy" pattern="\d{1,2}/\d{1,2}/\d{4}"><br><br>
-					Your favorite flower colors: <br>
-					<input type = "checkbox" name = "red">Red<br>
-					<input type = "checkbox" name = "blue">Blue<br>
-					<input type = "checkbox" name = "blue">Yellow<br>
-					<input type = "checkbox" name = "blue">Orange<br><br>
-
-				</fieldset>
-				<fieldset>
-					<legend>Let's start a conversation</legend>
-					
-					Message: <br>
-					<textarea name = "message" maxlength = "1000" rows = "10" cols = "50" placeholder = "Write something nice!" required></textarea><br><br>
-				</fieldset>
+				Message: <br>
+				<textarea name = "message" maxlength = "1000" rows = "10" cols = "50" placeholder = "Write something nice!" required></textarea><br><br>
+			</fieldset>
 			<!-- style="width: 300px; height: 150px;"
 			-->
 
@@ -132,12 +132,7 @@
 	<footer>
 		<hr/>
 		&copy; Bradley Chen 2018<br/>
-		<a href = "mailto: bradleychen@cmu.edu">Email Me</a>
 		<a href = "http://cmu.edu" target = "_blank">Carnegie Mellon University</a>
-
-
-
-
 	</footer>
 
 </div>
